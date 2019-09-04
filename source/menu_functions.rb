@@ -1,15 +1,31 @@
 
 require 'csv'
 require 'tty-pie'
+
+# Defining a function to display History
+
 def history
    puts `clear`
-    File.open("history.txt","r").each_with_index do |line,index|
-        if index == 0
-            puts line.upcase.blink
-        else
-        puts line
-        end
-    end
+   File.open("history.txt","r").each_with_index do |line,index|
+      if index == 0
+      puts line.upcase.blink
+      else
+      puts line + "\n"
+      end
+   end
+end
+
+# Defining a function to display Rules
+
+def rules
+   puts 'clear'
+   File.open("rules.txt","r").each_with_index do |line,index|
+      if index == 0
+      puts line.upcase.blink
+      else
+      puts line
+      end
+   end 
 end
 
 def take_quiz(array)
@@ -44,7 +60,7 @@ def take_quiz(array)
                 puts "Incorrect answer"
              end
         end
-        puts "YOUR SCORE IS #{score}"
+        puts "YOUR SCORE IS #{score}".blink
       #   score_list(name,score)
 end
 
@@ -52,14 +68,15 @@ end
 #    puts `clear`
 #     score = []
 #     score_list_hash = {
-#         "name" => name,
-#         "score" => score1
+#         "Name" => name,
+#         "Score" => score1
 #     }
 #     score << score_list_hash
-#     # File.write("Book1.csv","a").each do |line|
-#     #     line << score_list_hash
-#     # end
-#     puts "Your"score
+#     row = File.read("quizscore.csv")
+#       row_data = CSV.parse(row,:headers => true)
+#       File.write(row_data,"a") do |line|
+#        line << score_list_hash
+# end
 # end
 
 def display_team_list

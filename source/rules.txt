@@ -1,8 +1,11 @@
-Object of the Game
+Rules of the Game
+
 The object of the game is to kick the football between a series of 4 goal posts. 
 Depending on which posts the ball goes between will depend on how many points you score. 
 The ball can be passed around between team mates in a series of fashions and the winning team will be the team with the highest number of points at the end of the game.
-Scoring
+
+SCORING
+
 If the ball is kicked between the two goal posts (middle posts) then 6 points are awarded. 
 If the ball goes between a goal post and one of the behind posts (point) then 1 point is awarded. 
 
