@@ -2,6 +2,23 @@
 require 'csv'
 require 'tty-pie'
 
+
+def user_verifiation(input,password)
+   puts `clear`
+ row = File.read("Users.csv")
+ row_data = CSV.parse(row,:headers => true)
+ users = []
+ row_data.each_with_index do |line,index|
+  row = line.to_hash
+  if row['Username'] == input && row['Password'] == password
+      puts "Welcome #{input}"
+      break
+  elsif index == row_data.length - 1
+   puts "Does not exist"
+  end
+ end
+ end
+
 # Defining a function to display History
 
 def history
@@ -18,7 +35,6 @@ end
 # Defining a function to display Rules
 
 def rules
-   puts 'clear'
    File.open("rules.txt","r").each_with_index do |line,index|
       if index == 0
       puts line.upcase.blink
@@ -61,6 +77,24 @@ def take_quiz(array)
              end
         end
         puts "YOUR SCORE IS #{score}".blink
+        File.open("quizscore.csv", "a") do |file|
+         file << "\n#{name},#{score}"
+       end
+
+       ###################################
+      #  csv_text = File.read('quizscore.csv')
+      #  p csv_text
+      #    csv = CSV.parse(csv_text, :headers => true)
+         # csv.each do |row|
+         # row_data = row.to_hash
+         #    puts row_data
+         #    # cities << row_data
+         # end 
+         # puts cities.length
+       ###################################
+
+
+
       #   score_list(name,score)
 end
 

@@ -7,6 +7,14 @@ require_relative "question"
 prompt = TTY::Prompt.new
 font = TTY::Font.new(:doom)
 # puts Rainbow("this is red").blink
+
+puts "Welcome to FOOTYPEDIA"
+puts "Login to continue\nEnter your username"
+input = gets.chomp
+puts "Enter your password"
+password = STDIN.noecho(&:gets).chomp
+user_verifiation(input,password)  
+
 puts font.write("         FOOTYHUB", letter_spacing:1).blink
 puts font.write("ALL FOOTY THINGS", letter_spacing:1)
 
