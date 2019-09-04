@@ -1,13 +1,14 @@
 require 'colorize'
 require "tty-prompt"
 require "tty-font"
+require 'rainbow'
 require_relative "menu_functions"
 require_relative "question"
 prompt = TTY::Prompt.new
 font = TTY::Font.new(:doom)
-
-puts font.write("         FOOTYHUB", letter_spacing:1)
-puts font.write("ALL FOOTY THINGS", letter_spacing:1)
+# puts Rainbow("this is red").blink
+puts font.write("         FOOTYHUB", letter_spacing:1).blink
+puts font.write("ALL FOOTY THINGS", letter_spacing:1).blink
 
 score_list = {
     name: "",
@@ -28,12 +29,12 @@ selection = prompt.select("Select from the options below?") do |option|
     option.choice :History, 1
     option.choice :"Rules", 2
     option.choice :"Clubs List", 3
-    option.choice :"Winners and Brownlow list", 4
-    option.choice :"Test your Footy Knowledge", 5
-    option.choice :Exit, 6
+    # option.choice :"Winners and Brownlow list", 4
+    option.choice :"Test your Footy Knowledge", 4
+    option.choice :Exit, 5
   end
 
-break if [selection] == [6]
+break if [selection] == [5]
 
 if [selection] == [1]
             history
@@ -51,7 +52,7 @@ if [selection] == [1]
                 display_team_list
                 # puts "Pick a team to display more information"
                 
-    elsif [selection] == [5]
+    elsif [selection] == [4]
      take_quiz(question_array)
 end
 end
