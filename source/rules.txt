@@ -1,5 +1,4 @@
 Rules of the Game
-
 The object of the game is to kick the football between a series of 4 goal posts. 
 Depending on which posts the ball goes between will depend on how many points you score. 
 The ball can be passed around between team mates in a series of fashions and the winning team will be the team with the highest number of points at the end of the game.

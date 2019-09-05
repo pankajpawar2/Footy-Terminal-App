@@ -11,6 +11,14 @@ Software development plan states the purpose of the terminal application, provid
 *  Test Cases
 *  Project Development 
 
+## Help 
+
+To run my app use the following command:
+
+```bash 
+ruby footypedia.rb
+```
+
 ## Statement of Purpose
 The Terminal applications is called "FOOTYHUB". The users of the application will be able to understand the history of Australian Football League(AFL) and understand the rules and common terms used in the game. Australian Football League is common sports played across australia, with Victoria being the dominant state. It has around 8 teams participating each year from total of 18.
 

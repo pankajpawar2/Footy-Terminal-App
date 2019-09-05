@@ -38,7 +38,9 @@ end
 def rules
    File.open("rules.txt","r").each_with_index do |line,index|
       if index == 0
+         puts "##########################"
       puts line.upcase.blink
+      puts "##########################"
       else
       puts line
       end
