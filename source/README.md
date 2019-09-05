@@ -10,14 +10,7 @@ Software development plan states the purpose of the terminal application, provid
 *  Feature Implementation Plan
 *  Test Cases
 *  Project Development 
-
-## Help 
-
-To run my app use the following command:
-
-```bash 
-ruby footypedia.rb
-```
+*  Help
 
 ## Statement of Purpose
 The Terminal applications is called "FOOTYHUB". The users of the application will be able to understand the history of Australian Football League(AFL) and understand the rules and common terms used in the game. Australian Football League is common sports played across australia, with Victoria being the dominant state. It has around 8 teams participating each year from total of 18.
@@ -41,3 +34,38 @@ This is the first feature of the application and provides users access to use th
 The login page checks if the username and password is correct. This is done by reading the "Users.csv" file and checking if the username and password is correct.
 *user_verification* is the function used to perform user verification. This function takes two arguments - username and password. The function then checks the csv file to complete user verification.
 If the user does not exist, there is an option to continue as guest.
+
+
+* ***Check History of Foooty***
+
+Once the user has successfully logged in, they can choose from severl options which are displayed on a menu.
+The first option will help users to know a brief history of the game.
+
+![History Page](History.png)
+
+*check_history* is the the function used for this purpose.
+When the history option is selected, the function reads data from 'history.txt' file and displays it to the user.
+
+
+* ***Rules of Foooty***
+
+The second option is 'Rules' which will help users to know some of the rules of the game.
+
+![Rules Page](Rules.png)
+
+*check_rules* is the the function used for this purpose.
+When the 'Rules' option is selected, the function reads data from 'rules.txt' file and displays it to the user.
+
+
+* ***List of Clubs***
+
+The third option is 'Clubs List' which will display a list of active clubs in footy.
+
+![Clubs List](Clubs.png)
+
+*display_team_list* is the the function used for this purpose.
+When the 'Clubs List' option is selected, the function reads data from teams_array, sorts the array alphabetically and displays it to the user.
+
+The function also accepts user input to get users favourite team. Depending on the input(Team), the app displays the championships won by the team. It also represents the data in a pie chart to the user.
+
+![Clubs List](Clubs1.png)
