@@ -67,5 +67,16 @@ The third option is 'Clubs List' which will display a list of active clubs in fo
 When the 'Clubs List' option is selected, the function reads data from teams_array, sorts the array alphabetically and displays it to the user.
 
 The function also accepts user input to get users favourite team. Depending on the input(Team), the app displays the championships won by the team. It also represents the data in a pie chart to the user.
+This is achieved by reading data from 'championships.csv' file. 
 
 ![Clubs List](Clubs1.png)
+
+
+* ***Take the Quiz***
+
+The fourth option is 'Take the Quiz' which will ask the users to take a quiz to test their footy knowledge.
+
+![Quiz Page](Quiz.png)
+
+*check_rules* is the the function used for this purpose.
+When the 'Rules' option is selected, the function reads data from 'rules.txt' file and displays it to the user.

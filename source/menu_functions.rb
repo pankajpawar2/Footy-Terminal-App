@@ -87,7 +87,9 @@ def display_team_list
   puts `clear`
   teams_array = ["Geelong", "Adelaide", "Essendon", "Port Adelaide", "North Melbourne", "Melbourne", "St Kilda", "Brisbane Lions",
                  "Gold Coast", "Freemantle", "Richmond", "West coast", "Collingwood", "Sydney Swans", "Greater Western Sydney", "Hawthorn", "Western Bulldogs", "Carlton"]
-  puts teams_array.sort
+   puts "########################################"
+   puts teams_array.sort
+   puts "########################################"
   loop do
     puts "Enter your favourite team"
     print "> "
@@ -107,7 +109,7 @@ end
 
 def teams_championships(team)
   puts `clear`
-  row = File.read("Scores.csv")
+  row = File.read("championships.csv")
   row_data = CSV.parse(row, :headers => true)
   championships = []
   row_data.each do |line|
