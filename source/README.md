@@ -1,10 +1,12 @@
 # Software Development Plan
+
 Software development plan states the purpose of the terminal application, providing a list of functions/features that will be implemented in the application.
 
 ## Contents
+
 *  Statement of Purpose
-*  Features
-*  User Interactions 
+*  Included Features
+*  User Interaction Guide
 *  Error Handling
 *  Control Flow Diagram
 *  Feature Implementation Plan
@@ -13,7 +15,10 @@ Software development plan states the purpose of the terminal application, provid
 *  Help
 
 ## Statement of Purpose
+
 The Terminal applications is called "FOOTYHUB". The users of the application will be able to understand the history of Australian Football League(AFL) and understand the rules and common terms used in the game. Australian Football League is common sports played across australia, with Victoria being the dominant state. It has around 8 teams participating each year from total of 18.
+
+The reason for developing this terminal application is to provide users with simple application to get all the information regarding Australian Footbal League.
 
 Users will be presented with a login screen when the application starts. Once user is verified, the user is presented with home page with different menu options.
 Users can choose any option and depending on the selection, will be directed to the corresponding page.
@@ -21,9 +26,9 @@ Some of the data is stored in CSV/Text files and it is being retrieved depending
 
 Users will be able to check the list of active clubs and depending on the chosen team, can see how many championships they have won till date. Users can also take a quiz which will help them to test their footy knowledge.
 
-This application is mainly intended for people to understand the game of Footy and anyone who loves the game can benefit from this application.
+This application is mainly intended for users to understand the game of Footy and anyone who likes the game can benefit from this application. The main aim of the application is to keep it simple and make it user friendly, so that anyone can use the application without any difficulties.
 
-## Features
+## Included Features
 The application has a list of features, which are provided below
 
 * ***User Login***
@@ -34,6 +39,9 @@ This is the first feature of the application and provides users access to use th
 The login page checks if the username and password is correct. This is done by reading the "Users.csv" file and checking if the username and password is correct.
 *user_verification* is the function used to perform user verification. This function takes two arguments - username and password. The function then checks the csv file to complete user verification.
 If the user does not exist, there is an option to continue as guest.
+
+Control flow structure redirects users to appropriate sections of the application.
+Error handling functionality has been implemented for this feature. When user enters a blank username, it raises an exception that "Username can not be blank". 
 
 
 * ***Check History of Foooty***
@@ -67,7 +75,7 @@ The third option is 'Clubs List' which will display a list of active clubs in fo
 When the 'Clubs List' option is selected, the function reads data from teams_array, sorts the array alphabetically and displays it to the user.
 
 The function also accepts user input to get users favourite team. Depending on the input(Team), the app displays the championships won by the team. It also represents the data in a pie chart to the user.
-This is achieved by reading data from 'championships.csv' file. 
+This is achieved by reading data from 'championships.csv' file. teams_championships is the function used to achieve this, which takes team_array as an argument.
 
 ![Clubs List](Clubs1.png)
 
@@ -75,8 +83,12 @@ This is achieved by reading data from 'championships.csv' file.
 * ***Take the Quiz***
 
 The fourth option is 'Take the Quiz' which will ask the users to take a quiz to test their footy knowledge.
+Users will be presented with five questions and will be provided with final score at the end of the quiz.
 
 ![Quiz Page](Quiz.png)
 
-*check_rules* is the the function used for this purpose.
-When the 'Rules' option is selected, the function reads data from 'rules.txt' file and displays it to the user.
+*take_quiz* is the the function used for this purpose.
+
+
+## User Interaction Guide
+
