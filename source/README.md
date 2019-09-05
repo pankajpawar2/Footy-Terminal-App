@@ -120,3 +120,29 @@ To close the application, navigate to the Exit option using UP/DOWN arrow keys o
 ## Flowchart
 
 ![Flowchart](Flowchart.png)
+
+
+## Feature Implementation Plan
+
+This section provides information regarding how each feature has been implemented and a checklist for each feature.
+
+* Login for the Application
+
+User is prompted to enter a username and password.
+A list of users is stored in a csv file called "Users.csv"
+
+Checklist:
+1. Check if username is not blank
+2. Check if username and password match
+
+* Create Menu
+
+Users have different meunu options to choose from. Each menu option can be selected using up/down arrows on the keyboard and then pressing Enter.
+
+* History and rules
+
+Different functions are called to display History/rules of the game.
+Data is read from csv files and displayed to the user
+
+All the features are implemented using different functions and making use of csv files, using loops and various other object oriented concepts in ruby.
+
