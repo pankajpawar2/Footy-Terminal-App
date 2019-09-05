@@ -4,7 +4,7 @@ require 'tty-pie'
 
 def user_verification(input, password)
   puts `clear`
-  row = File.read("Users.csv")
+  row = File.read("USERS.csv")
   row_data = CSV.parse(row, :headers => true)
   users = []
   row_data.each_with_index do |line, index|
@@ -23,7 +23,7 @@ end
 
 def check_history
   puts `clear`
-  File.open("history.txt", "r").each_with_index do |line, index|
+  File.open("HISTORY.txt", "r").each_with_index do |line, index|
     if index == 0
       puts line.upcase.blink
     else
@@ -35,7 +35,7 @@ end
 # Defining a function to display Rules
 
 def check_rules
-  File.open("rules.txt", "r").each_with_index do |line, index|
+  File.open("RULES.txt", "r").each_with_index do |line, index|
     if index == 0
       puts "##########################"
       puts line.upcase.blink
@@ -79,7 +79,7 @@ def take_quiz(array)
     end
   end
   puts "YOUR SCORE IS #{score}".blink
-  File.open("quizscore.csv", "a") do |file|
+  File.open("QUIZSCORE.csv", "a") do |file|
     file << "\n#{name},#{score}"
   end
 end
@@ -110,7 +110,7 @@ end
 
 def teams_championships(team)
   puts `clear`
-  row = File.read("championships.csv")
+  row = File.read("CHAMPIONSHIPS.csv")
   row_data = CSV.parse(row, :headers => true)
   championships = []
   row_data.each do |line|
