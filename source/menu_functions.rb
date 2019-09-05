@@ -1,7 +1,6 @@
 require 'csv'
 require 'tty-pie'
 
-
 def user_verification(input, password)
   puts `clear`
   row = File.read("USERS.csv")
@@ -25,7 +24,7 @@ def check_history
   puts `clear`
   File.open("HISTORY.txt", "r").each_with_index do |line, index|
     if index == 0
-      puts line.upcase.blink
+      puts line.upcase.blink.colorize(:blue)
     else
       puts line + "\n"
     end
@@ -38,7 +37,7 @@ def check_rules
   File.open("RULES.txt", "r").each_with_index do |line, index|
     if index == 0
       puts "##########################"
-      puts line.upcase.blink
+      puts line.upcase.blink.colorize(:blue)
       puts "##########################"
     else
       puts line
@@ -88,9 +87,9 @@ def display_team_list
   puts `clear`
   teams_array = ["Geelong", "Adelaide", "Essendon", "Port Adelaide", "North Melbourne", "Melbourne", "St Kilda", "Brisbane Lions",
                  "Gold Coast", "Freemantle", "Richmond", "West coast", "Collingwood", "Sydney Swans", "Greater Western Sydney", "Hawthorn", "Western Bulldogs", "Carlton"]
-   puts "########################################"
-   puts teams_array.sort
-   puts "########################################"
+  puts "########################################"
+  puts teams_array.sort
+  puts "########################################"
   loop do
     puts "Enter your favourite team"
     print "> "
@@ -128,6 +127,4 @@ def teams_championships(team)
   pie_chart = TTY::Pie.new(data: data, radius: 8)
   print pie_chart
 end
-# if ARGV[0] = "history"
-#    check_history
-# end
+

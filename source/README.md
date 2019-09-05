@@ -151,7 +151,11 @@ All the features are implemented using different functions and making use of csv
 
 ## Before using the Application
 
-Please run the "bash.sh" file before using the terminal application.
+Please run the "build.sh" file before using the terminal application.
+To run the file, type below command in terminal(Make sure you navigate to the directory which contains build.sh)
+
+bash build.sh
+
 This will create a distribution directory and also copy all the files to distribution directory.
 Running "bash.sh" will also install all the required gems on your machine.
 
@@ -169,3 +173,5 @@ The application can also accept two arguments
 
     **ruby footypedia.rb "rules"**
 
+Github repository for the project
+https://github.com/pankajpawar2/Footy-Terminal-App

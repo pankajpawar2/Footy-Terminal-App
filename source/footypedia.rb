@@ -11,10 +11,10 @@ font = TTY::Font.new(:doom)
 
 if ARGV[0] == 'history' || ARGV[0] == 'History'
   check_history
-Process.exit(0)
+  Process.exit(0)
 elsif ARGV[0] == 'rules' || ARGV[0] == 'Rules'
   check_rules
-Process.exit(0)
+  Process.exit(0)
 end
 
 loop do

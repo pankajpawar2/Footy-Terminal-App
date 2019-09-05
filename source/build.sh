@@ -5,11 +5,11 @@ cp ./footypedia.rb ./dist
 cp ./menu_functions.rb ./dist
 cp ./question.rb ./dist
 cp ./test.rb ./dist
-cp ./CHAMPIONSHIPS.rb ./dist
-cp ./QUIZSCORE.rb ./dist
-cp ./USERS.rb ./dist
-cp ./HISTORY.rb ./dist
-cp ./RULES.rb ./dist
+cp ./CHAMPIONSHIPS.csv ./dist
+cp ./QUIZSCORE.csv ./dist
+cp ./USERS.csv ./dist
+cp ./HISTORY.txt ./dist
+cp ./RULES.txt ./dist
 
 # install all gems
 gem install 'colorize'
