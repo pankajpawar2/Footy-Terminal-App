@@ -29,7 +29,8 @@ Users will be able to check the list of active clubs and depending on the chosen
 This application is mainly intended for users to understand the game of Footy and anyone who likes the game can benefit from this application. The main aim of the application is to keep it simple and make it user friendly, so that anyone can use the application without any difficulties.
 
 ## Included Features
-The application has a list of features, which are provided below
+
+The application has various features, which are listed below:
 
 * ***User Login***
 
@@ -91,4 +92,28 @@ Users will be presented with five questions and will be provided with final scor
 
 
 ## User Interaction Guide
+
+This section will provide a brief summary for users to know how to use and interact with different features of the application.
+(Different commands which can be used to start and interact with this terminal application are listed in the Help section at the bottom of this document.)
+
+### Login Section:
+Users will have to input their username and password using keyboard. While the user is typing the password, the password will not be displayed on the screen. It is therefore important, that user enters correct password.
+This is for security purposes so that no one else can see users password.
+
+
+### Choose menu options (After user has logged in):
+To choose a particular option from the menu, use the arrow keys(Up and Down) on the keyboard to navigate to the option.
+Then press either ENTER or SPACE to select the option.
+
+
+### Enter favourite team(Clubs List option):
+User will need to use keyboard to enter in their favourite team.
+
+
+### Answering quiz questions(Take the Quiz option):
+When taking the quiz, users will have to enter numbers between 1 to 4 using keyboard to submit their answers. As there are only 4 answer options, users need to enter a valid answer which can be any number between 1 and 4.
+
+### Exiting the application
+To close the application, navigate to the Exit option using UP/DOWN arrow keys on the keyboard and press ENTER.
+
 
