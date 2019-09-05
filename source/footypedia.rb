@@ -33,10 +33,12 @@ puts font.write("ALL FOOTY THINGS", letter_spacing:1)
 
 question_array = []
 q1 = Question.new("Who won the championship in 2017","Brisbane","Richmond","Essendon","Collingwood","Richmond")
-q2 = Question.new("Who won brownlow medal in 2018","Edie","Tom","Rob","John","Tom")
-q3 = Question.new("For what offense, was a crows fan given a season-long ban in may","Slapping a Bulldogs player on the bum","Impersonating Taylor Walker","Playing the Richmond theme song at a members' function","Interrupting Don Pyke at a press conference","Slapping a Bulldogs player on the bum")
+q2 = Question.new("How many points a team gets if they score a goal","5","1","6","3","6")
+q3 = Question.new("Who won brownlow medal in 2018","Eddie Betts","Tom Mitchell","Dustin Martin","Scott Pendlebury","Tom Mitchell")
+q4 = Question.new("For what offense, was a crows fan given a season-long ban in may","Slapping a Bulldogs player on the bum","Impersonating Taylor Walker","Playing the Richmond theme song at a members' function","Interrupting Don Pyke at a press conference","Slapping a Bulldogs player on the bum")
+q5 = Question.new("How many points for a disposal","5","1","6","3","1")
 
-question_array.push(q1,q2,q3)
+question_array.push(q1,q2,q3,q4,q5)
 # question_array << q2
 # question_array << q3
 

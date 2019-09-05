@@ -15,11 +15,7 @@ def user_verifiation(input,password)
       break
   elsif index == row_data.length - 1
    puts "User does not exist"
-   puts "Continue as guest(Y/N)"
-   b = gets.chomp
-   if b == "yes" || b == "y" || b == 'Y' || b == 'Yes' || b == 'YES'
-      break
-   end   
+   puts "Logged in as guest"
   end
  end
  end
@@ -85,38 +81,7 @@ def take_quiz(array)
         File.open("quizscore.csv", "a") do |file|
          file << "\n#{name},#{score}"
        end
-
-       ###################################
-      #  csv_text = File.read('quizscore.csv')
-      #  p csv_text
-      #    csv = CSV.parse(csv_text, :headers => true)
-         # csv.each do |row|
-         # row_data = row.to_hash
-         #    puts row_data
-         #    # cities << row_data
-         # end 
-         # puts cities.length
-       ###################################
-
-
-
-      #   score_list(name,score)
 end
-
-# def score_list(name,score1)
-#    puts `clear`
-#     score = []
-#     score_list_hash = {
-#         "Name" => name,
-#         "Score" => score1
-#     }
-#     score << score_list_hash
-#     row = File.read("quizscore.csv")
-#       row_data = CSV.parse(row,:headers => true)
-#       File.write(row_data,"a") do |line|
-#        line << score_list_hash
-# end
-# end
 
 def display_team_list
    puts `clear`
@@ -153,7 +118,7 @@ row_data.each do |line|
       puts "Premiership Champions: #{row['Year']}"
   end
 end
-puts Rainbow("#{team} has won #{championships.length} times").bright.blink
+puts Rainbow("#{team} has won the flag #{championships.length} times").bright.blink
 data = [
   { name: team, value: championships.length.to_i, color: :bright_yellow, fill: '@' },
   { name: 'Others', value: 110, color: :bright_blue, fill: '@' }
