@@ -11,10 +11,15 @@ def user_verifiation(input,password)
  row_data.each_with_index do |line,index|
   row = line.to_hash
   if row['Username'] == input && row['Password'] == password
-      puts "Welcome #{input}"
+      puts "Welcome #{input.capitalize}"
       break
   elsif index == row_data.length - 1
-   puts "Does not exist"
+   puts "User does not exist"
+   puts "Continue as guest"
+   b = gets.chomp
+   if b == "yes"
+      break
+   end   
   end
  end
  end
@@ -151,8 +156,10 @@ end
 puts Rainbow("#{team} has won #{championships.length} times").bright.blink
 data = [
   { name: team, value: championships.length.to_i, color: :bright_yellow, fill: '@' },
-  { name: 'Others', value: 110, color: :bright_green, fill: '@' }
+  { name: 'Others', value: 110, color: :bright_blue, fill: '@' }
 ]
 pie_chart = TTY::Pie.new(data: data, radius: 8)
 print pie_chart
 end
+
+

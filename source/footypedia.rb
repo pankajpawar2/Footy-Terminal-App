@@ -8,7 +8,11 @@ prompt = TTY::Prompt.new
 font = TTY::Font.new(:doom)
 # puts Rainbow("this is red").blink
 
-puts "Welcome to FOOTYPEDIA"
+# argv_input = ARGV
+# argv_input << ARGV[0]
+# puts argv_input
+
+puts "Welcome to FOOTYPEDIA".blink
 puts "Login to continue\nEnter your username"
 input = gets.chomp
 puts "Enter your password"
@@ -19,13 +23,13 @@ puts font.write("         FOOTYHUB", letter_spacing:1).blink
 puts font.write("ALL FOOTY THINGS", letter_spacing:1)
 
 question_array = []
-q1 = Question.new("Who won the championship in 2017","Richmond","Brisbane","Essendon","Collingwood","Richmond")
-q2 = Question.new("Who won brownlow medal in 2018","Tom","Edie","Rob","John","Tom")
+q1 = Question.new("Who won the championship in 2017","Brisbane","Richmond","Essendon","Collingwood","Richmond")
+q2 = Question.new("Who won brownlow medal in 2018","Edie","Tom","Rob","John","Tom")
 q3 = Question.new("For what offense, was a crows fan given a season-long ban in may","Slapping a Bulldogs player on the bum","Impersonating Taylor Walker","Playing the Richmond theme song at a members' function","Interrupting Don Pyke at a press conference","Slapping a Bulldogs player on the bum")
 
-question_array << q1
-question_array << q2
-question_array << q3
+question_array.push(q1,q2,q3)
+# question_array << q2
+# question_array << q3
 
 loop do
   selection = prompt.select("Select from the options below?") do |option|
@@ -49,4 +53,6 @@ loop do
                   take_quiz(question_array)
       end
 end
+
+
 
