@@ -15,9 +15,9 @@ def user_verifiation(input,password)
       break
   elsif index == row_data.length - 1
    puts "User does not exist"
-   puts "Continue as guest"
+   puts "Continue as guest(Y/N)"
    b = gets.chomp
-   if b == "yes"
+   if b == "yes" || b == "y" || b == 'Y' || b == 'Yes' || b == 'YES'
       break
    end   
   end

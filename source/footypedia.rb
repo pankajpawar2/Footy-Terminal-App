@@ -11,13 +11,22 @@ font = TTY::Font.new(:doom)
 # argv_input = ARGV
 # argv_input << ARGV[0]
 # puts argv_input
-
+# loop do
+# begin
 puts "Welcome to FOOTYPEDIA".blink
 puts "Login to continue\nEnter your username"
 input = gets.chomp
+# if input == "" || input[0].is_number?
+#   raise
+# end
 puts "Enter your password"
 password = STDIN.noecho(&:gets).chomp
 user_verifiation(input,password)  
+# break
+# rescue 
+#   puts "Oopsss. Something happened. Username cannot be blank/Cannot start with a number"
+# end
+# end
 
 puts font.write("         FOOTYHUB", letter_spacing:1).blink
 puts font.write("ALL FOOTY THINGS", letter_spacing:1)
@@ -53,6 +62,3 @@ loop do
                   take_quiz(question_array)
       end
 end
-
-
-
