@@ -117,3 +117,6 @@ When taking the quiz, users will have to enter numbers between 1 to 4 using keyb
 To close the application, navigate to the Exit option using UP/DOWN arrow keys on the keyboard and press ENTER.
 
 
+## Flowchart
+
+![Flowchart](Flowchart.png)
