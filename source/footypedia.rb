@@ -9,6 +9,8 @@ require_relative 'question'
 prompt = TTY::Prompt.new
 font = TTY::Font.new(:doom)
 
+# puts ARGV[0]
+
 loop do
   begin
     puts font.write('FOOTYHUB', letter_spacing: 1).blink

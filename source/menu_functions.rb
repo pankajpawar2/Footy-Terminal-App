@@ -1,6 +1,7 @@
 require 'csv'
 require 'tty-pie'
 
+
 def user_verification(input, password)
   puts `clear`
   row = File.read("Users.csv")
@@ -127,3 +128,6 @@ def teams_championships(team)
   pie_chart = TTY::Pie.new(data: data, radius: 8)
   print pie_chart
 end
+# if ARGV[0] = "history"
+#    check_history
+# end
