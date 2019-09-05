@@ -1,7 +1,7 @@
 require 'csv'
 require 'tty-pie'
 
-def user_verifiation(input, password)
+def user_verification(input, password)
   puts `clear`
   row = File.read("Users.csv")
   row_data = CSV.parse(row, :headers => true)

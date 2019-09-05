@@ -1,12 +1,18 @@
 require 'colorize'
+require_relative 'menu_functions'
+require_relative 'question'
 
-def test_teams_championships
-    club = "Carlton"
-    result = teams_championships(club)
-    if result.class == String
-      puts "Test passes!".colorize(:green)
-    else 
-      return "Test fails".colorize(:red)
-    end  
-end 
-test_teams_championships
+
+
+##############################################################
+# Test user verification method if user enters blank username
+##############################################################
+# def test_user_verification
+#     name = ""
+#     password = "abcd"
+#     user_verification(name,password)
+# end 
+# b = test_user_verification
+
+# q5 = Question.new('Who won the championship in 2017', 'West Coast', 'Richmond', 'Essendon', 'Collingwood', 'West Coast')
+# question_array<<q5

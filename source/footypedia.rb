@@ -18,7 +18,7 @@ loop do
 
     puts 'Enter your password'
     password = STDIN.noecho(&:gets).chomp
-    user_verifiation(input, password)
+    user_verification(input, password)
     break
   rescue StandardError
     puts 'Oopsss. Something happened. Username cannot be blank'
