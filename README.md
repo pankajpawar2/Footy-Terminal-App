@@ -6,24 +6,25 @@ Github repository for the project
 https://github.com/pankajpawar2/Footy-Terminal-App
 
 1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command
-git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
+***git clone https://github.com/pankajpawar2/Footy-Terminal-App.git***
 
 2. 'cd' into the repository you have cloned
+
 3. Run the build shell script. Type below command in terminal
 
-**bash build.sh**
+   **bash build.sh**
 
 3. 'cd' into the dist directory.
 
 4. To run the application, type below command
 
-**ruby footypedia.rb**
+   **ruby footypedia.rb**
 
 5. The application can also be run in advanced mode
 
-**ruby footypedia.rb "history"** - To go to History page directly, type below command in the terminal:
+   **ruby footypedia.rb "history"** - To go to History page directly
 
-**ruby footypedia.rb "rules"** - To go to Rules page directly, type below command in the terminal:
+   **ruby footypedia.rb "rules"** - To go to Rules page directly
 
 
 # Software Development Plan
@@ -75,7 +76,7 @@ Error handling functionality has been implemented for this feature. When user en
 
 * ***Check History of Foooty***
 
-Once the user has successfully logged in, they can choose from severl options which are displayed on a menu.
+Once the user has successfully logged in, they can choose from several options which are displayed on a menu.
 The first option will help users to know a brief history of the game.
 
 ![History Page](History.png)
@@ -122,7 +123,7 @@ Users will be presented with five questions and will be provided with final scor
 ## User Interaction Guide
 
 This section will provide a brief summary for users to know how to use and interact with different features of the application.
-(Different commands which can be used to start and interact with this terminal application are listed in the Help section at the bottom of this document.)
+(Different commands which can be used to start and interact with this terminal application are listed in the Help section)
 
 ### Login Section:
 Users will have to input their username and password using keyboard. While the user is typing the password, the password will not be displayed on the screen. It is therefore important, that user enters correct password.
@@ -165,7 +166,7 @@ Checklist:
 
 * Create Menu
 
-Users have different meunu options to choose from. Each menu option can be selected using up/down arrows on the keyboard and then pressing Enter.
+Users have different menu options to choose from. Each menu option can be selected using up/down arrows on the keyboard and then pressing Enter.
 
 * History and rules
 
@@ -173,6 +174,11 @@ Different functions are called to display History/rules of the game.
 Data is read from csv files and displayed to the user
 
 All the features are implemented using different functions and making use of csv files, using loops and various other object oriented concepts in ruby.
+
+## Project Management Platform Used
+
+In order to track down the progress of the project, Trello was used to manage the checklist and update the to-do list.
+Also, slack was used to communicate the project progress or to ask any questions related to the project.
 
 
 
