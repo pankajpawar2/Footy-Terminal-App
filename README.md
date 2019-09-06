@@ -2,16 +2,12 @@
 
 ## Before using the Application
 
-```bash 
-ruby app.rb 
-```
-
 Github repository for the project
 https://github.com/pankajpawar2/Footy-Terminal-App
 
 1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command:
 
-```bash
+```
 git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
 ```
 
@@ -19,16 +15,18 @@ git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
 
 3. Run the build shell script. Type below command in terminal:
 
-```bash
+```
 bash build.sh
 ```
 3. 'cd' into the dist directory.
 
 4. To run the application, type below command
+
 ```
  ruby footypedia.rb
 ```
 5. The application can also be run in advanced mode
+
 ```
 ruby footypedia.rb "history" - To go to History page directly
 
@@ -330,6 +328,8 @@ end
 Users also have an option to take a quiz to test footy knowledge.
 Users are asked to answer 5 questions and depending on the correct/incorrect answers, a final score is shown to the user at the end of the quiz.
 A function called 'take_quiz' is used for this purpose. It takes an array of questions as an argument.
+It checks the answer of each question against the correct answer for the question stored in questions array.
+If the answer is correct, value of score variable is incremented by 1.
 
 ```
 def take_quiz(array)
