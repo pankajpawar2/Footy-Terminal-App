@@ -7,15 +7,16 @@ https://github.com/pankajpawar2/Footy-Terminal-App
 
 1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command 
 
-```txt
+```bash
 git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
 ```
 
 2. 'cd' into the repository you have cloned
 
 3. Run the build shell script. Type below command in terminal
-```
- bash build.sh
+
+```bash
+bash build.sh
 ```
 3. 'cd' into the dist directory.
 
@@ -25,9 +26,9 @@ git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
 ```
 5. The application can also be run in advanced mode
 ```
-   ruby footypedia.rb "history" - To go to History page directly
+ruby footypedia.rb "history" - To go to History page directly
 
-   ruby footypedia.rb "rules" - To go to Rules page directly
+ruby footypedia.rb "rules" - To go to Rules page directly
 ```
 
 # Software Development Plan
