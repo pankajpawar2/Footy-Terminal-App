@@ -55,7 +55,7 @@ The Terminal applications is called "FOOTYHUB". The users of the application wil
 
 The reason for developing this terminal application is to provide users with simple application to get all the information regarding Australian Footbal League.
 
-Users will be presented with a login screen when the application starts. Once user is verified, the user is presented with home page with different menu options.
+Users will be presented with a login screen when the application starts. Once user is verified,the user is presented with home page with different menu options.
 Users can choose any option and depending on the selection, will be directed to the corresponding page.
 Some of the data is stored in CSV/Text files and it is being retrieved depending on the user input.
 
@@ -378,5 +378,10 @@ All the features are implemented using different functions and making use of csv
 In order to track down the progress of the project, Trello was used to manage the checklist and update the to-do list.
 Also, slack was used to communicate the project progress or to ask any questions related to the project.
 
+![Trello Screenshot](pankaj-pawar-T1A2-Trello-1.png)
 
+![Trello Screenshot](pankaj-pawar-T1A2-Trello-final.png)
+
+
+# Thank You....
 
