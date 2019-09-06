@@ -5,9 +5,10 @@
 Github repository for the project
 https://github.com/pankajpawar2/Footy-Terminal-App
 
-1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command
-```
- git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
+1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command 
+
+```txt
+git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
 ```
 
 2. 'cd' into the repository you have cloned
