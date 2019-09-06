@@ -180,7 +180,7 @@ begin
     puts 'Oopsss. Something happened. Username cannot be blank'
 end
 ```
-After user enter the username and password, a function 'user_verification' is called to verify if the user exists in the database. A list of users is stored in a csv file called "Users.csv"
+After user enters the username and password, a function 'user_verification' is called to verify if the user exists in the database. A list of users is stored in a csv file called "USERS.csv"
 
 Function to verify if user exists:
 ```

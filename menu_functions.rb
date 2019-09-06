@@ -86,7 +86,7 @@ end
 def display_team_list
   puts `clear`
   teams_array = ["Geelong", "Adelaide", "Essendon", "Port Adelaide", "North Melbourne", "Melbourne", "St Kilda", "Brisbane Lions",
-                 "Gold Coast", "Freemantle", "Richmond", "West coast", "Collingwood", "Sydney Swans", "Greater Western Sydney", "Hawthorn", "Western Bulldogs", "Carlton"]
+                 "Gold Coast", "Freemantle", "Richmond", "West Coast", "Collingwood", "Sydney Swans", "Greater Western Sydney", "Hawthorn", "Western Bulldogs", "Carlton"]
   puts "########################################"
   puts teams_array.sort
   puts "########################################"
