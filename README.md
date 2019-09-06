@@ -151,6 +151,16 @@ All the features are implemented using different functions and making use of csv
 
 ## Before using the Application
 
+Github repository for the project
+https://github.com/pankajpawar2/Footy-Terminal-App
+
+Please make sure you have ruby installed on your machine. Clone the repository.
+git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
+
+'cd' into the repo you have clones.
+run the build shell script
+cd into the dist directory
+
 Please run the "build.sh" file before using the terminal application.
 To run the file, type below command in terminal(Make sure you navigate to the directory which contains build.sh)
 
@@ -163,15 +173,12 @@ Once the above step is completed, please type in below command in the terminal:
 
 **ruby footypedia.rb**
 
-The application can also accept two arguments
+The application can also be run in advanced mode
 
-1. To go to History page directly, type below command in the terminal:
+**ruby footypedia.rb "history"**
 
-    **ruby footypedia.rb "history"**
+To go to History page directly, type below command in the terminal:
 
-2. To go to Rules page directly, type below command in the terminal:
+**ruby footypedia.rb "rules"**
 
-    **ruby footypedia.rb "rules"**
-
-Github repository for the project
-https://github.com/pankajpawar2/Footy-Terminal-App
+To go to Rules page directly, type below command in the terminal:
