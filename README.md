@@ -2,10 +2,14 @@
 
 ## Before using the Application
 
+```bash 
+ruby app.rb 
+```
+
 Github repository for the project
 https://github.com/pankajpawar2/Footy-Terminal-App
 
-1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command 
+1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command:
 
 ```bash
 git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
@@ -13,7 +17,7 @@ git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
 
 2. 'cd' into the repository you have cloned
 
-3. Run the build shell script. Type below command in terminal
+3. Run the build shell script. Type below command in terminal:
 
 ```bash
 bash build.sh
