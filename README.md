@@ -6,26 +6,28 @@ Github repository for the project
 https://github.com/pankajpawar2/Footy-Terminal-App
 
 1. Please make sure you have ruby installed on your machine. Clone the repository. Type in below command
-***git clone https://github.com/pankajpawar2/Footy-Terminal-App.git***
+```
+ git clone https://github.com/pankajpawar2/Footy-Terminal-App.git
+```
 
 2. 'cd' into the repository you have cloned
 
 3. Run the build shell script. Type below command in terminal
-
-   **bash build.sh**
-
+```
+ bash build.sh
+```
 3. 'cd' into the dist directory.
 
 4. To run the application, type below command
-
-   **ruby footypedia.rb**
-
+```
+ ruby footypedia.rb
+```
 5. The application can also be run in advanced mode
+```
+   ruby footypedia.rb "history" - To go to History page directly
 
-   **ruby footypedia.rb "history"** - To go to History page directly
-
-   **ruby footypedia.rb "rules"** - To go to Rules page directly
-
+   ruby footypedia.rb "rules" - To go to Rules page directly
+```
 
 # Software Development Plan
 
@@ -157,8 +159,44 @@ This section provides information regarding how each feature has been implemente
 
 * Login for the Application
 
-User is prompted to enter a username and password.
-A list of users is stored in a csv file called "Users.csv"
+User is prompted to enter a username and password. Following block of code is used to get user input.
+
+```
+begin
+    puts font.write('FOOTYHUB', letter_spacing: 1).blink
+    puts "Login to continue\nEnter your username"
+    input = gets.chomp
+    raise if input == '' || input[0] == Integer
+
+    puts 'Enter your password'
+    password = STDIN.noecho(&:gets).chomp
+    user_verification(input, password)
+    break
+  rescue StandardError
+    puts 'Oopsss. Something happened. Username cannot be blank'
+end
+```
+After user enter the username and password, a function 'user_verification' is called to verify if the user exists in the database. A list of users is stored in a csv file called "Users.csv"
+
+Function to verify if user exists:
+```
+def user_verification(input, password)
+  puts `clear`
+  row = File.read("USERS.csv")
+  row_data = CSV.parse(row, :headers => true)
+  users = []
+  row_data.each_with_index do |line, index|
+    row = line.to_hash
+    if row['Username'] == input && row['Password'] == password
+      puts "Welcome #{input.capitalize}"
+      break
+    elsif index == row_data.length - 1
+      puts "User does not exist"
+      puts "Logged in as guest"
+    end
+  end
+end
+```
 
 Checklist:
 1. Check if username is not blank
@@ -167,11 +205,165 @@ Checklist:
 * Create Menu
 
 Users have different menu options to choose from. Each menu option can be selected using up/down arrows on the keyboard and then pressing Enter.
+Following block of code displays menu to the user and accepts user selection.
+```
+loop do
+  selection = prompt.select('Select from the options below?') do |option|
+    option.choice :History, 1
+    option.choice :Rules, 2
+    option.choice :"Clubs List", 3
+    option.choice :"Test your Footy Knowledge", 4
+    option.choice :Exit, 5
+  end
+
+  break if [selection] == [5]
+
+  if [selection] == [1]
+    check_history
+  elsif [selection] == [2]
+    check_rules
+  elsif [selection] == [3]
+    display_team_list
+  elsif [selection] == [4]
+    take_quiz(question_array)
+  end
+end
+```
 
 * History and rules
 
 Different functions are called to display History/rules of the game.
 Data is read from csv files and displayed to the user
+
+```
+# Defining a function to display History
+
+def check_history
+  puts `clear`
+  File.open("HISTORY.txt", "r").each_with_index do |line, index|
+    if index == 0
+      puts line.upcase.blink.colorize(:blue)
+    else
+      puts line + "\n"
+    end
+  end
+end
+```
+
+```
+# Defining a function to display Rules
+
+def check_rules
+  File.open("RULES.txt", "r").each_with_index do |line, index|
+    if index == 0
+      puts "##########################"
+      puts line.upcase.blink.colorize(:blue)
+      puts "##########################"
+    else
+      puts line
+    end
+  end
+end
+```
+
+* Clubs list
+
+If user selects "Clubs List" option from the menu, a function 'display_team_list' is called to display list of all the clubs.
+
+```
+def display_team_list
+  puts `clear`
+  teams_array = ["Geelong", "Adelaide", "Essendon", "Port Adelaide", "North Melbourne", "Melbourne", "St Kilda", "Brisbane Lions","Gold Coast", "Freemantle", "Richmond", "West coast", "Collingwood", "Sydney Swans", "Greater Western Sydney", "Hawthorn", "Western Bulldogs", "Carlton"]
+  puts "########################################"
+  puts teams_array.sort
+  puts "########################################"
+  loop do
+    puts "Enter your favourite team"
+    print "> "
+    input = gets.strip
+
+    if teams_array.include? input
+      teams_championships(input)
+      break
+    elsif teams_array.include? input.capitalize
+      teams_championships(input.capitalize)
+      break
+    else
+      puts "Incorrect entry. Please try again"
+    end
+  end
+end
+```
+User is also asked to enter their favourite team and the user input is passed as an argument to a function called 'teams_championships'
+
+```
+def teams_championships(team)
+  puts `clear`
+  row = File.read("CHAMPIONSHIPS.csv")
+  row_data = CSV.parse(row, :headers => true)
+  championships = []
+  row_data.each do |line|
+    row = line.to_hash
+    if row['Premiership Team'] == team
+      championships << row
+      puts "Premiership Champions: #{row['Year']}"
+    end
+  end
+  puts Rainbow("#{team} has won the flag #{championships.length} times").bright.blink
+  data = [
+    { name: team, value: championships.length.to_i, color: :bright_yellow, fill: '@' },
+    { name: 'Others', value: 110, color: :bright_blue, fill: '@' }
+  ]
+  pie_chart = TTY::Pie.new(data: data, radius: 8)
+  print pie_chart
+end
+```
+
+* Take the Quiz
+
+Users also have an option to take a quiz to test footy knowledge.
+Users are asked to answer 5 questions and depending on the correct/incorrect answers, a final score is shown to the user at the end of the quiz.
+A function called 'take_quiz' is used for this purpose. It takes an array of questions as an argument.
+
+```
+def take_quiz(array)
+  puts `clear`
+  score = 0
+  score_report = {}
+  puts "Enter your nick name"
+  name = gets.strip
+  puts "Get ready for the challenge"
+  array.each do |questions|
+    puts "Question. #{questions.question}"
+    puts "1. #{questions.option1}"
+    puts "2. #{questions.option2}"
+    puts "3. #{questions.option3}"
+    puts "4. #{questions.option4}"
+    input = gets.strip
+    if input.to_s != input.to_i.to_s
+      puts "Invalid input. Try again"
+    elsif input == "1" && questions.option1 == questions.answer
+      puts "Correct answer"
+      score += 1
+    elsif input == "2" && questions.option2 == questions.answer
+      puts "Correct answer"
+      score += 1
+    elsif input == "3" && questions.option3 == questions.answer
+      puts "Correct answer"
+      score += 1
+    elsif input == "4" && questions.option4 == questions.answer
+      puts "Correct answer"
+      score += 1
+    else
+      puts "Incorrect answer"
+    end
+  end
+  puts "YOUR SCORE IS #{score}".blink
+  File.open("QUIZSCORE.csv", "a") do |file|
+    file << "\n#{name},#{score}"
+  end
+end
+```
 
 All the features are implemented using different functions and making use of csv files, using loops and various other object oriented concepts in ruby.
 

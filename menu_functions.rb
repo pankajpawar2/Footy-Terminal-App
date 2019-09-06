@@ -49,7 +49,7 @@ def take_quiz(array)
   puts `clear`
   score = 0
   score_report = {}
-  puts "Enter your name"
+  puts "Enter your nick name"
   name = gets.strip
   puts "Get ready for the challenge"
   array.each do |questions|
