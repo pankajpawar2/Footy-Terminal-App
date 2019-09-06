@@ -1,7 +1,7 @@
 chmod +x ./build.sh
 # copy across files to distribution directory
 mkdir dist
-cp ./footypedia.rb ./dist
+cp ./footyhub.rb ./dist
 cp ./menu_functions.rb ./dist
 cp ./question.rb ./dist
 cp ./test.rb ./dist

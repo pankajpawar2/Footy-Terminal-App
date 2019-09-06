@@ -23,14 +23,14 @@ bash build.sh
 4. To run the application, type below command
 
 ```
- ruby footypedia.rb
+ ruby footyhub.rb
 ```
 5. The application can also be run in advanced mode
 
 ```
-ruby footypedia.rb "history" - To go to History page directly
+ruby footyhub.rb "history" - To go to History page directly
 
-ruby footypedia.rb "rules" - To go to Rules page directly
+ruby footyhub.rb "rules" - To go to Rules page directly
 ```
 
 # Software Development Plan
@@ -70,7 +70,7 @@ The application has various features, which are listed below:
 * ***User Login***
 
 This is the first feature of the application and provides users access to use the application.
-![Login Page](Login.png)
+![Login Page](pankaj-pawar-T1A2-login.png)
 
 The login page checks if the username and password is correct. This is done by reading the "Users.csv" file and checking if the username and password is correct.
 *user_verification* is the function used to perform user verification. This function takes two arguments - username and password. The function then checks the csv file to complete user verification.
@@ -85,7 +85,7 @@ Error handling functionality has been implemented for this feature. When user en
 Once the user has successfully logged in, they can choose from several options which are displayed on a menu.
 The first option will help users to know a brief history of the game.
 
-![History Page](History.png)
+![History Page](pankaj-pawar-T1A2-history.png)
 
 *check_history* is the the function used for this purpose.
 When the history option is selected, the function reads data from 'history.txt' file and displays it to the user.
@@ -95,7 +95,7 @@ When the history option is selected, the function reads data from 'history.txt' 
 
 The second option is 'Rules' which will help users to know some of the rules of the game.
 
-![Rules Page](Rules.png)
+![Rules Page](pankaj-pawar-T1A2-rules.png)
 
 *check_rules* is the the function used for this purpose.
 When the 'Rules' option is selected, the function reads data from 'rules.txt' file and displays it to the user.
@@ -105,7 +105,7 @@ When the 'Rules' option is selected, the function reads data from 'rules.txt' fi
 
 The third option is 'Clubs List' which will display a list of active clubs in footy.
 
-![Clubs List](Clubs.png)
+![Clubs List](pankaj-pawar-T1A2-clubs.png)
 
 *display_team_list* is the the function used for this purpose.
 When the 'Clubs List' option is selected, the function reads data from teams_array, sorts the array alphabetically and displays it to the user.
@@ -113,7 +113,7 @@ When the 'Clubs List' option is selected, the function reads data from teams_arr
 The function also accepts user input to get users favourite team. Depending on the input(Team), the app displays the championships won by the team. It also represents the data in a pie chart to the user.
 This is achieved by reading data from 'championships.csv' file. teams_championships is the function used to achieve this, which takes team_array as an argument.
 
-![Clubs List](Clubs1.png)
+![Clubs List](pankaj-pawar-T1A2-club-championships.png)
 
 
 * ***Take the Quiz***
@@ -121,7 +121,7 @@ This is achieved by reading data from 'championships.csv' file. teams_championsh
 The fourth option is 'Take the Quiz' which will ask the users to take a quiz to test their footy knowledge.
 Users will be presented with five questions and will be provided with final score at the end of the quiz.
 
-![Quiz Page](Quiz.png)
+![Quiz Page](pankaj-pawar-T1A2-quiz.png)
 
 *take_quiz* is the the function used for this purpose.
 
@@ -154,7 +154,7 @@ To close the application, navigate to the Exit option using UP/DOWN arrow keys o
 
 ## Flowchart
 
-![Flowchart](Flowchart.png)
+![Flowchart](pankaj-pawar-T1A2-flowchart.png)
 
 
 ## Feature Implementation Plan
